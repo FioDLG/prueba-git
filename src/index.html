@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div class="logo">
+        <img src="./Imagenes/logorgb.png" alt="Gaming Store Logo">
+    </div>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    
+
+    <ul class="galeria">
+
+        <!-- AUDIFONOS -->
+        <li class="producto">
+
+            <div class="slider">
+
+                <img src="./Imagenes/audifonos1.png" class="slide active">
+                <img src="./Imagenes/audifonos2.png" class="slide">
+
+            </div>
+
+            <h2>Audífonos Gamer</h2>
+            <p class="categoria">Audífonos</p>
+
+        </li>
+
+        <!-- MOUSE -->
+        <li class="producto">
+
+            <div class="slider">
+
+                <img src="./Imagenes/mouse1.png" class="slide active">
+                <img src="./Imagenes/mouse2.png" class="slide">
+
+            </div>
+
+            <h2>Mouse RGB</h2>
+            <p class="categoria">Mouse</p>
+
+        </li>
+
+        <!-- TECLADOS -->
+        <li class="producto">
+
+            <div class="slider">
+
+                <img src="./Imagenes/teclado1.png" class="slide active">
+                <img src="./Imagenes/teclado2.png" class="slide">
+                <img src="./Imagenes/teclado3.png" class="slide">
+                <img src="./Imagenes/teclado4.png" class="slide">
+
+            </div>
+
+            <h2>Teclado Mecánico</h2>
+            <p class="categoria">Teclados</p>
+
+        </li>
+
+    </ul>
+
+    <script>
+
+        const sliders = document.querySelectorAll(".slider");
+
+        sliders.forEach(slider => {
+
+            const slides = slider.querySelectorAll(".slide");
+            let index = 0;
+
+            setInterval(() => {
+
+                slides[index].classList.remove("active");
+
+                index = (index + 1) % slides.length;
+
+                slides[index].classList.add("active");
+
+            }, 2000);
+
+        });
+
+    </script>
+
+</body>
+</html>
